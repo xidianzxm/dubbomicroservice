@@ -10,7 +10,3 @@ mvnw.cmd
 *.iws
 *.iml
 *.ipr
-/dubbo-api/target/
-/dubbo-movie-provider/target/
-/dubbo-user-consumer/target/
-/.idea/
