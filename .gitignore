@@ -3,10 +3,14 @@
 /.mvn/*
 mvnw
 mvnw.cmd
-/target/
+/*/target/*
 
 ### IntelliJ IDEA ###
 .idea
 *.iws
 *.iml
 *.ipr
+/dubbo-api/target/
+/dubbo-movie-provider/target/
+/dubbo-user-consumer/target/
+/.idea/
