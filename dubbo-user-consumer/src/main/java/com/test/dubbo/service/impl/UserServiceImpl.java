@@ -1,7 +1,7 @@
 package com.test.dubbo.service.impl;
 
 import com.test.dubbo.bean.Movie;
-import com.test.dubbo.bean.Order;
+//import com.test.dubbo.bean.Order;
 import com.test.dubbo.bean.User;
 import com.test.dubbo.service.MovieService;
 import com.test.dubbo.service.UserService;

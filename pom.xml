@@ -16,10 +16,4 @@
         <module>dubbo-api</module>
     </modules>
 
-
-    <!--    <modules>-->
-<!--        <module>jeecg-boot-base-common</module>-->
-<!--        <module>jeecg-boot-module-system</module>-->
-<!--    </modules>-->
-
 </project>
