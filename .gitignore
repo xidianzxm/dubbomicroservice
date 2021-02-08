@@ -10,3 +10,8 @@ mvnw.cmd
 *.iws
 *.iml
 *.ipr
+/.settings/*
+*/.settings/*
+.settings/
+.project
+*/.project
