@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd http://dubbo.apache.org/schema/dubbo  http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd http://dubbo.apache.org/schema/dubbo  http://dubbo.apache.org/schema/dubbo/dubbo.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.test.dubbo.service.impl"></context:component-scan>
+
     <!-- 提供方应用信息，用于计算依赖关系 -->
 
     <!--1、为当前应用起个名字-->
@@ -11,14 +14,14 @@
     <!--2、告诉Dubbo注册中心地址在哪里？注册中心用的是zookeeper -->
     <dubbo:registry address="zookeeper://127.0.0.1:2181" />
 
-    <!--3、 要调用哪个远程服务【服务引用】-->
+    <!--3、 要调用哪个远程服务【服务引用】服务端暴露movieService-->
     <dubbo:reference id="movieService" interface="com.test.dubbo.service.MovieService" />
 
     <!--4、将消费者加入到容器中 -->
-    <bean id="userService" class="com.test.dubbo.service.impl.UserServiceImpl" >
+<!--    <bean id="userService" class="com.test.dubbo.service.impl.UserServiceImpl" >-->
 
-        <property name="movieService" ref="movieService">
+<!--        <property name="movieService" ref="movieService">-->
 
-    </property>
-    </bean>
+<!--        </property>-->
+<!--    </bean>-->
 </beans>

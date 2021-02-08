@@ -2,21 +2,26 @@ package com.test.dubbo.service.impl;
 
 import com.test.dubbo.bean.Movie;
 //import com.test.dubbo.bean.Order;
-import com.test.dubbo.bean.User;
 import com.test.dubbo.service.MovieService;
 import com.test.dubbo.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+
+@Service
 public class UserServiceImpl implements UserService {
 
+    @Autowired
     MovieService movieService;
 
-    public MovieService getMovieService() {
-        return movieService;
-    }
+//    public MovieService getMovieService() {
+//        return movieService;
+//    }
+//
+//    public void setMovieService(MovieService movieService) {
+//        this.movieService = movieService;
+//    }
 
-    public void setMovieService(MovieService movieService) {
-        this.movieService = movieService;
-    }
 
     public Movie buyNewMovie() {
 

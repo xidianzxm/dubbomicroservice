@@ -11,6 +11,7 @@ public class MainApplication {
         ClassPathXmlApplicationContext applicationContext =
                 new ClassPathXmlApplicationContext("consumer.xml");
         applicationContext.start();
+
         UserService userService = applicationContext.getBean(UserService.class);
 
         //测试这次远程调用是否成功
